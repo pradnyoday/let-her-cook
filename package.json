@@ -6,12 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start:watch": "nodemon --watch src --watch public --ext ts,tsx,js,jsx,css --delay 2000ms --exec \"sh -lc 'npm run build && npx kill-port 3000 || true && npm run start'\"",
     "lint": "eslint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.40.0",
+    "lucide-react": "^1.16.0",
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -20,6 +25,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "kill-port": "^2.0.1",
+    "nodemon": "^3.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
