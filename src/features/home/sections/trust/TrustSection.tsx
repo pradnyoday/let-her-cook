@@ -13,7 +13,7 @@ const items = [
 
 export const TrustSection: React.FC = () => {
   return (
-    <section className="bg-white py-14 md:py-16 border-y border-[#eee8dd]">
+    <section id="why-us" className="bg-white py-14 md:py-16 border-y border-[#eee8dd]">
       <Container>
         <div className="text-center mb-10">
           <Heading size="md" className="text-primary text-4xl md:text-5xl">Why Families Trust Us</Heading>

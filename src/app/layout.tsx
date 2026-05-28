@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <Navbar />
-        <main className="mx-auto w-full space-y-8 md:space-y-10 pb-8 md:pb-12">{children}</main>
+        <main className="mx-auto w-full space-y-8 md:space-y-10">{children}</main>
         <FloatingWhatsapp />
       </body>
     </html>

@@ -13,7 +13,7 @@ const audience = [
 
 export const FaqSection: React.FC = () => {
   return (
-    <section className="bg-[#fffdf7] py-16 md:py-20">
+    <section id="for-cooks" className="bg-[#fffdf7] py-16 md:py-20">
       <Container>
         <div className="text-center mb-10">
           <Heading size="md" className="text-primary">Perfect For</Heading>

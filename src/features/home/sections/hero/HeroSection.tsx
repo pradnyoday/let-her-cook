@@ -2,10 +2,14 @@
 
 import Container from "@/design-system/ui/container/Container";
 import Button from "@/design-system/ui/button/Button";
+import { withBasePath } from '@/shared/utils/withBasePath'
+
+const WHATSAPP_LINK = 'https://wa.me/message/NERRPQY2Y2IHI1'
+const PHONE_LINK = 'tel:+917028219690'
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
+    <section id="home" className="relative overflow-hidden py-20 lg:py-28">
       <Container>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -54,16 +58,16 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-4">
 
-              <Button className="px-8">
+              <Button className="px-8" onClick={() => window.open(WHATSAPP_LINK, '_blank', 'noopener,noreferrer')}>
                 Book on WhatsApp
               </Button>
 
-              <Button
-                variant="outline"
-                className="px-8"
+              <a
+                href={PHONE_LINK}
+                className="inline-flex h-12 items-center rounded-full border border-[#1f5c3f] px-8 text-sm font-medium text-[#1f5c3f] transition-all duration-300 hover:bg-[#1f5c3f] hover:text-white md:text-base"
               >
                 Call Now
-              </Button>
+              </a>
 
             </div>
 
@@ -79,6 +83,10 @@ export default function HeroSection() {
 
               <div className="flex items-center gap-2">
                 ✓ Flexible timings
+              </div>
+
+              <div className="flex items-center gap-2">
+                ✓ Punctual service
               </div>
 
             </div>
@@ -104,7 +112,7 @@ export default function HeroSection() {
             >
 
               <img
-                src="/hero/home-cook.png"
+                src={withBasePath('/hero/home-cook.png')}
                 alt="Home Cook"
                 className="
                 aspect-[4/5]
@@ -114,29 +122,6 @@ export default function HeroSection() {
                 "
               />
 
-            </div>
-
-            {/* floating badge */}
-            <div
-              className="
-              absolute
-              -bottom-4
-              -left-4
-              rounded-3xl
-              bg-[#1f5c3f]
-              px-6
-              py-4
-              text-white
-              shadow-xl
-              "
-            >
-              <div className="text-2xl font-bold">
-                10K+
-              </div>
-
-              <div className="text-sm opacity-90">
-                Happy Families
-              </div>
             </div>
 
           </div>

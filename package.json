@@ -1,18 +1,22 @@
 {
+  "homepage": "https://lethercook.in",
   "name": "let-her-cook",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "start:watch": "nodemon --watch src --watch public --ext ts,tsx,js,jsx,css --delay 2000ms --exec \"sh -lc 'npm run build && npx kill-port 3000 || true && npm run start'\"",
-    "lint": "eslint"
+    "build": "SITE_BASE_PATH= next build",
+    "start": "node scripts/serve-preview.mjs",
+    "start:watch": "nodemon --watch src --watch public --ext ts,tsx,js,jsx,css --delay 2000ms --exec \"sh -lc 'npm run build && npx kill-port 3000 || true && node scripts/serve-preview.mjs'\"",
+    "lint": "eslint",
+    "export": "next export",
+    "predeploy": "npm run build",
+    "deploy": "SITE_BASE_PATH= gh-pages -d out --nojekyll --cname lethercook.in"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.40.0",
-    "lucide-react": "^1.16.0",
+    "lucide-react": "^1.17.0",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -25,6 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "gh-pages": "^6.3.0",
     "kill-port": "^2.0.1",
     "nodemon": "^3.0.1",
     "tailwindcss": "^4",

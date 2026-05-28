@@ -13,7 +13,7 @@ const steps = [
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section id="how-it-works" className="bg-white py-16 md:py-20">
       <Container>
         <div className="text-center mb-10">
           <Heading size="md" className="text-primary">How It Works</Heading>

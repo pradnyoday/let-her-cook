@@ -4,6 +4,8 @@ import { Container } from '@/design-system/ui/container'
 import { Heading } from '@/design-system/ui/heading'
 import { CheckCircle2, Gift } from 'lucide-react'
 
+const WHATSAPP_LINK = 'https://wa.me/message/NERRPQY2Y2IHI1'
+
 const plans = [
   { title: '1 Time Cooking', subtitle: 'Perfect for trying our service', price: '₹1,200', cta: 'Get Started', features: ['Breakfast / Lunch / Dinner', 'For 2+ Family Members', 'Cook Provided', 'Hygienic Home Cooking'] },
   { title: '2 Times Cooking', subtitle: 'Breakfast + Lunch or Lunch + Dinner', price: '₹2,200', cta: 'Get Started', popular: true, features: ['2 Times Cooking Daily', 'For 2+ Family Members', 'Cook Provided', 'Backup Support'] },
@@ -12,7 +14,7 @@ const plans = [
 
 export const PricingSection: React.FC = () => {
   return (
-    <section className="bg-[#fffdf7] py-16 md:py-20">
+    <section id="pricing" className="bg-[#fffdf7] py-16 md:py-20">
       <Container>
         <div className="text-center mb-10">
           <Heading size="md" className="text-primary">Simple & Affordable Plans</Heading>
@@ -25,7 +27,7 @@ export const PricingSection: React.FC = () => {
               <h3 className="text-3xl font-heading text-primary">{p.title}</h3>
               <p className="mt-2 text-sm text-text-secondary">{p.subtitle}</p>
               <p className="mt-5 text-4xl font-bold text-primary">{p.price}<span className="ml-1 text-base font-medium text-text-secondary">/month</span></p>
-              <button className={`mt-5 h-11 w-full rounded-xl font-medium text-white ${p.popular ? 'bg-orange-500' : 'bg-deep-green'}`}>{p.cta}</button>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={`mt-5 h-11 w-full rounded-xl font-medium !text-white inline-flex items-center justify-center ${p.popular ? 'bg-orange-500' : 'bg-deep-green'}`}>{p.cta}</a>
               <ul className="mt-5 space-y-2">
                 {p.features.map((f) => <li key={f} className="flex items-center gap-2 text-sm text-text-secondary"><CheckCircle2 size={16} className="text-deep-green" />{f}</li>)}
               </ul>
@@ -34,7 +36,7 @@ export const PricingSection: React.FC = () => {
         </div>
         <div className="mt-8 rounded-2xl border border-[#f2dfb9] bg-[#fff5dd] px-5 py-4 md:px-8 md:py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex items-center gap-3 text-orange-600 font-semibold text-xl"><Gift size={24} /> First 30 Bookings Get 2 Days Free Service!</div>
-          <button className="h-11 rounded-xl bg-orange-500 px-6 text-white font-medium">Book on WhatsApp</button>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 items-center rounded-xl bg-orange-500 px-6 font-medium !text-white hover:!text-white focus:!text-white">Book on WhatsApp</a>
         </div>
       </Container>
     </section>

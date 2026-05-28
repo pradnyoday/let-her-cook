@@ -1,6 +1,9 @@
 "use client"
 import * as React from 'react'
 import { Container } from '@/design-system/ui/container'
+import { withBasePath } from '@/shared/utils/withBasePath'
+
+const WHATSAPP_LINK = 'https://wa.me/message/NERRPQY2Y2IHI1'
 
 export const CtaSection: React.FC = () => {
   return (
@@ -13,7 +16,7 @@ export const CtaSection: React.FC = () => {
           </div>
           <div className="rounded-xl bg-white/10 border border-white/20 px-6 py-5 text-center">
             <p className="text-sm text-white/90">Scan to Book on WhatsApp</p>
-            <div className="mt-3 h-24 w-24 bg-white rounded-md mx-auto" />
+            <img src={withBasePath('/cta-qr-whatsapp.png')} alt="Scan to book on WhatsApp" className="mt-3 h-24 w-24 rounded-md mx-auto bg-white object-cover" />
           </div>
         </div>
       </Container>
