@@ -1,2 +1,4 @@
-:HL["/_next/static/chunks/0c0l12070cpj7.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"APdoEbJZRc1c9M5EiRaH7"}
+:HL["/_next/static/chunks/0ksm-7ogbfc.w.css","style"]
+:HL["https://cdn-icons-png.flaticon.com/512/2111/2111463.png","image"]
+:HL["https://cdn-icons-png.flaticon.com/512/733/733585.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"nzLpw59zxnJi481vy4CPL"}
